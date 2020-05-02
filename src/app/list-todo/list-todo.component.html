@@ -1,14 +1,11 @@
-<div class="container">
+<app-page-name [pageName]="pageName"></app-page-name>
+<div class="content">
     <div class="row">
-        <div class="card-wraper col-12" *ngFor="let todo of todos | filter:textSearch">
-            <div class="trash" (click)="remove(todo)"></div>
-            <app-card [todo]="todo"></app-card>
+        <div class="card-wraper col-lg-4" *ngFor="let todo of todos">
+            <a [routerLink]="['/lista', todo.id]">
+                <app-card [todo]="todo"></app-card>
+            </a>
         </div>
     </div>
-    <div class="not-todo" *ngIf="!todos?.length">
-        <p>Adicione todo</p>
-        <span>😁</span>
-    </div>
 </div>
-<app-add-task></app-add-task>
 <app-loader [spinner]="spinner"></app-loader>

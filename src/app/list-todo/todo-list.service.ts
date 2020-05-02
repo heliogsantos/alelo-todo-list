@@ -1,4 +1,3 @@
-import { ApiService } from '../api.service';
 import { NewTask } from './new-task';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -10,26 +9,26 @@ import { Observable } from 'rxjs';
 
 export class TodoListService {
 
-  constructor(private http: HttpClient, private api: ApiService) { }
+  constructor(private http: HttpClient) { }
 
-  url = this.api.getUrl();
+  url = "https://5e1f3d7d39f7a80014a5a349.mockapi.io/api/v1/categories";
 
   // Headers
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
 
-  // Obtem todos os todos
-  getTodos(): Observable<NewTask> {
-    return this.http.get<NewTask>(`${this.url}/todos`);
+  getCategories(): Observable<NewTask> {
+    return this.http.get<NewTask>(`${this.url}`);
   }
 
-  // salva um todo
-  saveTodo(todo: NewTask[]): Observable<NewTask[]> {
-    return this.http.post<NewTask[]>(`${this.url}/todos/` , JSON.stringify(todo), this.httpOptions);
+  getCategorieLists(id: string): Observable<any> {
+    return this.http.get<any>(`${this.url}/${id}/lists`);
   }
 
-  deleteTodo(todo: NewTask) {
-    return this.http.delete<NewTask>(`${this.url}/todos/${todo.id}`, this.httpOptions);
+  getCategorieListItems(id1: string, id2: string): Observable<any> {
+    return this.http.get<any>(`${this.url}/${id1}/lists/${id2}/items`);
   }
+
+
 }

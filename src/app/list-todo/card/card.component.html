@@ -1,25 +1,15 @@
-<div class="wraper-card" (click)="open()" [style.border-color]="checkBorder(todo.label)"
-  [style.background-color]="checkBorder(todo.label)" [ngClass]="{'remove-card': todo[0]}">
-  <div class="container" [ngClass]="{'active': openCard && verifyLength(todo.text) || showTrash}">
+<div class="wraper-card" *ngIf="todo.name">
+  <div class="container">
     <div class="row">
-      <div class="col-8">
-        <p class="title">{{todo.title | uppercase}}</p>
+      <div class="col-10">
+        <p class="title">{{todo.name | uppercase}}</p>
       </div>
-      <div class="col-2">
-        <p class="hours">{{todo.houer | date:"HH:mm"}}</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12" *ngIf="!openCard">
-        <p class="description">
-          {{todo.text.slice(0, 20)}}
-          <strong *ngIf="verifyLength(todo.text)">. . .</strong>
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-11" *ngIf="openCard">
-        <p>{{todo.text | lowercase}}</p>
+      <div class="col-2" *ngIf="checkKey(todo) < 4">
+        <div class="balls">
+          <div class="ball"></div>
+          <div class="ball"></div>
+          <div class="ball"></div>
+        </div>
       </div>
     </div>
   </div>

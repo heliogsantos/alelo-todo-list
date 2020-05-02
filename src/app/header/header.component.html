@@ -1,17 +1,11 @@
 <div class="header">
     <div class="detail"></div>
-    <app-search></app-search>
-    <div class="container" *ngIf="url() === '/adicionar'">
-        <div class="row">
-            <div class="col-1">
-                <a routerLink="">
-                    <div class="home-icon"></div>
-                </a>
-            </div>
-            <div class="col-10">
-                <h1>Adicionar</h1>
-            </div>
+    <div class="container">
+        <div>
+            <app-date></app-date>
+        </div>
+        <div>
+            <app-come-back></app-come-back>
         </div>
     </div>
-    <app-date></app-date>
 </div>

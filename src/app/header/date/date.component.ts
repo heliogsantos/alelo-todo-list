@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import * as moment from 'moment';
 moment.locale('pt');
@@ -10,20 +11,18 @@ moment.locale('pt');
 })
 export class DateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {}
 
   dayNumber: string = moment().format('Do').slice(0, 2);
   month: string = moment().format('MMMM');
   year: string = moment().format('YYYY');
-  day: string = moment().format('dddd');
 
   formateDay(): string {
-    if(this.dayNumber.length === 2) return this.dayNumber = moment().format('Do').slice(0, 1);
+    if(this.dayNumber.length === 2) {
+      return this.dayNumber = moment().format('Do').slice(0, 1);
+    }
     return this.dayNumber;
   }
   
-  ngOnInit() {
-    
-  }
-
+  ngOnInit() {}
 }

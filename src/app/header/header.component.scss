@@ -1,14 +1,14 @@
 .header {
     overflow: hidden;
     width: 100%;
-    height: 200px;
-    background-image: linear-gradient(100deg, #ef5350 , #e57373);
+    padding: 9px 0px 30px 0;
+    background-image: linear-gradient(100deg, #7159c1 , #866fd3);
     position: relative;
 
     .detail {
         width: 300px;
         height: 260px;
-        background-color: #fd7373;
+        background-color: #7159c1;
         position: absolute;
         right: -140px;
         top: -30px;
@@ -20,20 +20,17 @@
 
     h1 {
         text-align: center;
-        color: white;
+        color: #ffffff;
         font-weight: 400;
         font-size: 17px;
         padding-top: 30px;
     }
 
-    .home-icon {
-        width: 20px;
-        height: 20px;
-        position: relative;
-        z-index: 20;
-        top: 30px;
-        left: 20px;
-        background-image: url('../../assets/icons/arrow-left.svg');
-        background-size: cover;
+    .container {
+        display: flex;
+        padding: 20px 10px 10px 10px;
+        width: 90%;
+        align-items: center;
+        justify-content: space-between;
     }
 }

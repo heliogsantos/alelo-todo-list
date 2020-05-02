@@ -6,29 +6,31 @@ import { HttpClientModule  } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { SearchComponent } from './header/search/search.component';
+import { HeaderComponent } from './header/header.component'
 import { DateComponent } from './header/date/date.component';
 import { ListTodoComponent } from './list-todo/list-todo.component';
 import { CardComponent } from './list-todo/card/card.component';
-import { AddTaskComponent } from './add-task/add-task.component';
 import { DataService } from './data-service.service';
-import { FormComponent } from './form/form.component';
 import { TodoListService } from '././list-todo/todo-list.service';
 import { LoaderComponent } from './loader/loader.component';
+import { ListComponent } from './list/list.component';
+import { ItemsComponent } from './list/items/items.component';
+import { PageNameComponent } from './header/page-name/page-name.component';
+import { ComeBackComponent } from './header/come-back/come-back.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SearchComponent,
     DateComponent,
     ListTodoComponent,
     CardComponent,
-    AddTaskComponent,
-    FormComponent,
-    LoaderComponent
+    LoaderComponent,
+    ListComponent,
+    ItemsComponent,
+    PageNameComponent,
+    ComeBackComponent
   ],
   imports: [
     ReactiveFormsModule,

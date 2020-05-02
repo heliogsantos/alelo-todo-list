@@ -1,0 +1,8 @@
+<app-page-name [pageName]="pageName"></app-page-name>
+<div class="container">
+    <div class="row">
+        <div class="card-wraper col-12" *ngFor="let todo of items">
+            <app-card [todo]="todo"></app-card>
+        </div>
+    </div>
+</div>

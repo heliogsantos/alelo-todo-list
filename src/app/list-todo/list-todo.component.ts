@@ -18,20 +18,10 @@ export class ListTodoComponent implements OnInit {
   removeCard: boolean = false;
   @Input() deleteCard;
   @Input() spinner = true;
-
-  remove(todo) {
-    this.spinner = true;
-    this.removeCard = true;
-    todo[0] = true;
-
-    this.todoListService.deleteTodo(todo).subscribe((todo) => {
-      this.spinner = false;
-      this.listTodos();
-    });
-  }
+  pageName = "Categorias";
 
   private listTodos() {
-    this.todoListService.getTodos().subscribe((todo: NewTask) => {
+    this.todoListService.getCategories().subscribe((todo: NewTask) => {
       this.todos = todo;
       this.spinner = false;
     });

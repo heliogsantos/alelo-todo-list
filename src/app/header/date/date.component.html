@@ -1,24 +1,11 @@
 <div class="container">
     <div class="row">
-        <div class="col">
-            <div class="row">
-                <div [ngClass]="{'col-2': formateDay().length === 1, 'col-4': formateDay().length > 1}">
-                    <div class="day-number">
-                        <p>{{formateDay()}}</p>    
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="month">
-                        <p>{{month}}</p>
-                        <p>{{year}}</p>
-                    </div>
-                </div>
-            </div>
+        <div class="col-6 day-number">
+            <p>{{formateDay()}}</p>    
         </div>
-        <div class="col-6 text-right">
-            <div class="day">
-                <p>{{day}}</p>
-            </div>
+        <div class="col-6 month">
+            <p>{{month}}</p>
+            <p>{{year}}</p>
         </div>
     </div>
 </div>
