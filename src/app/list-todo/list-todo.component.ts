@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { NewTask } from './new-task';
 import { TodoListService } from './todo-list.service';
+import { DataService } from './../models/data-service.service';
 
 @Component({
   selector: 'app-list-todo',
@@ -10,7 +11,7 @@ import { TodoListService } from './todo-list.service';
 })
 export class ListTodoComponent implements OnInit {
 
-  constructor(private todoListService: TodoListService) { }
+  constructor(private todoListService: TodoListService, private dataService: DataService) { }
 
   todos: NewTask;
   textSearch: string;
@@ -28,5 +29,6 @@ export class ListTodoComponent implements OnInit {
 
   ngOnInit() {
     this.listTodos();
+    this.dataService.activeRoute('home');
   }
 }

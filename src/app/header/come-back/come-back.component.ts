@@ -10,10 +10,9 @@ import { DataService } from './../../models/data-service.service';
 export class ComeBackComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
-  router: "";
+  router: string;
 
   ngOnInit() {
     this.dataService.backRoute.subscribe(route => this.router = route);
   }
-
 }
