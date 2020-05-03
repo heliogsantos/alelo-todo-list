@@ -10,6 +10,7 @@ export class ButtonTaskComponent implements OnInit {
   constructor() { }
 
   @Input() text: string;
+  @Input() disabled = false;
 
   ngOnInit() {
   }

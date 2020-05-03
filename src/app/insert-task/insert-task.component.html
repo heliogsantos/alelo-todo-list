@@ -1,0 +1,16 @@
+<app-page-name [pageName]="pageName"></app-page-name>
+<div class="content">
+    <div class="row justify-content-center">
+        <h2>Insere uma lista</h2>
+    </div>
+    <form>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <input autocomplete="off" [(ngModel)]="newList" type="text" name="newList" class="hide-border form-control">
+            </div>
+        </div>
+    </form>
+</div>
+
+<app-button-task (click)="postList()" [disabled]="disabled" [text]="textBtn"></app-button-task>
+<app-loader [spinner]="spinner"></app-loader>

@@ -30,8 +30,8 @@ export class TodoListService {
     return this.http.get<any>(`${this.url}/${id1}/lists/${id2}/items`);
   }
 
-  saveList(id: string, list: object): Observable<any> {
-    return this.http.post<any>(`${this.url}/${id}/lists`, JSON.stringify(list), this.httpOptions);
+  saveList(idCategorie: string, list: object): Observable<any> {
+    return this.http.post<any>(`${this.url}/${idCategorie}/lists`, JSON.stringify(list), this.httpOptions);
   }
 
   updateItem(idCategorie: string, idList: string, idItem: string, item: object): Observable<any> {

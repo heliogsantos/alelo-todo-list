@@ -18,6 +18,7 @@ import { PageNameComponent } from './header/page-name/page-name.component';
 import { ComeBackComponent } from './header/come-back/come-back.component';
 import { ButtonTaskComponent } from './button-task/button-task.component';
 import { EmptyComponent } from './empty/empty.component';
+import { InsertTaskComponent } from './insert-task/insert-task.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { EmptyComponent } from './empty/empty.component';
     PageNameComponent,
     ComeBackComponent,
     ButtonTaskComponent,
-    EmptyComponent
+    EmptyComponent,
+    InsertTaskComponent
   ],
   imports: [
     ReactiveFormsModule,

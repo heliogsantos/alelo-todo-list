@@ -9,5 +9,7 @@
     </div>
     <app-empty *ngIf="!categorieList?.length" [text]="empty"></app-empty>
 </div>
-<app-button-task [text]="textBtn"></app-button-task>
+<a routerLink="/inserir">
+    <app-button-task [text]="textBtn"></app-button-task>
+</a>
 <app-loader [spinner]="spinner"></app-loader>
