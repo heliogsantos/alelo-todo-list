@@ -13,6 +13,7 @@ export class CardComponent implements OnInit {
   constructor() { }
 
   @Input() todo;
+  @Input() itemDone;
 
   checkKey(todo) {
     return Object.keys(todo).length;
