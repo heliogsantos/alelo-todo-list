@@ -12,18 +12,21 @@ import { DataService } from './../../models/data-service.service';
 })
 export class ItemsComponent implements OnInit {
 
+  pageName: string;
+
   constructor(
     private todoListService: TodoListService, 
     private route: ActivatedRoute,
     private dataService: DataService
   ) { 
     this.dataService.activeRoute(`lista/${this.getId()}`);
+    this.pageName = localStorage.getItem("listName");
   }
 
   @Input() items: any;
   urlId: string;
-  pageName = "Itens";
   textBtn = "Adicionar item";
+  subpage = "Itens";
 
   done(item: any) {
       this.todoListService.updateItem(this.getId(), this.urlId, item.id, this.checkDone(item)).subscribe(() => {

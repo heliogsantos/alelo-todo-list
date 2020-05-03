@@ -23,6 +23,11 @@ export class ListTodoComponent implements OnInit {
       this.spinner = false;
     });
   }
+
+  saveCategorieName(categorieName) {
+    localStorage.setItem("categorieName", categorieName);
+  }
+  
   ngOnInit() {
     this.listTodos();
     this.dataService.activeRoute('home');

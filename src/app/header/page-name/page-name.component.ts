@@ -10,6 +10,7 @@ export class PageNameComponent implements OnInit {
   constructor() { }
 
   @Input() pageName: string;
+  @Input() subpage: string;
 
   ngOnInit() {
   }

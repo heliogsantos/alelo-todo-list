@@ -1,9 +1,9 @@
-<app-page-name [pageName]="pageName"></app-page-name>
+<app-page-name [pageName]="pageName" [subpage]="subpage"></app-page-name>
 <div class="container">
     <div class="row">
         <div class="card-wraper col-12" *ngFor="let todo of categorieList">
             <a [routerLink]="['/itens', todo.id]">
-                <app-card [todo]="todo"></app-card>
+                <app-card (click)="saveListName(todo.name)" [todo]="todo"></app-card>
             </a>
         </div>
     </div>

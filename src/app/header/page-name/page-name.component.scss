@@ -3,4 +3,14 @@
     left: 50%;
     transform: translateX(-50%);
     top: 10px;
+    text-align: center;
+    list-style: 0;
+
+    p {
+        color: #c1bada;
+        font-weight: 400;
+        font-size: 13px;
+        position: relative;
+        top: -20px;
+    }
 }

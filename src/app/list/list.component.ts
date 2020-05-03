@@ -13,19 +13,27 @@ import { DataService } from './../models/data-service.service';
 })
 export class ListComponent implements OnInit {
 
+   pageName = "";
+
   constructor(
     private todoListService: TodoListService, 
     private route: ActivatedRoute,
     private dataService: DataService
   ) { 
     this.dataService.activeRoute("");
+    this.pageName = localStorage.getItem("categorieName");
   }
 
   @Input() list: any;
   urlId: string;
   categorieList: any;
-  pageName = "Listas";
-  textBtn = "Adicionar lista"
+  textBtn = "Adicionar lista";
+  subpage = "Listas";
+
+  
+  saveListName(name) {
+    localStorage.setItem("listName", name);
+  }
 
   ngOnInit() {
     this.route.params.pipe(map(p => p.id)).subscribe(id => {
@@ -35,8 +43,6 @@ export class ListComponent implements OnInit {
 
     this.todoListService.getCategorieLists(this.urlId).subscribe(list => {
       this.categorieList = list;
-
-   
     });
   }
 }
