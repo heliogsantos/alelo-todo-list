@@ -30,8 +30,9 @@ export class ItemsComponent implements OnInit {
   spinner = true;
 
   done(item: any) {
+      this.spinner = true;
       this.todoListService.updateItem(this.getId(), this.urlId, item.id, this.checkDone(item)).subscribe(() => {
-          console.log("Upadate");
+        this.spinner = false;
       });
   }
 
