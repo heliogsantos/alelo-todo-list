@@ -14,9 +14,6 @@ export class ListTodoComponent implements OnInit {
   constructor(private todoListService: TodoListService, private dataService: DataService) { }
 
   todos: NewTask;
-  textSearch: string;
-  removeCard: boolean = false;
-  @Input() deleteCard;
   @Input() spinner = true;
   pageName = "Categorias";
 
@@ -26,7 +23,6 @@ export class ListTodoComponent implements OnInit {
       this.spinner = false;
     });
   }
-
   ngOnInit() {
     this.listTodos();
     this.dataService.activeRoute('home');

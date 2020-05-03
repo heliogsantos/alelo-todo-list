@@ -27,19 +27,19 @@
 
     }
 
-    .balls {
+    .arrow {
         display: flex;
         flex-direction: column;
         height: 100%;
         justify-content: space-around;
-        align-items: flex-end;
 
-        .ball {
-            width: 6px;
-            height: 6px;
-            background-color: rgb(134, 134, 134);
+        .icon {
+            width: 15px;
+            height: 15px;
+            background-color: transparent;
             border-radius: 100%;
-            opacity: 0.2;
+            background-image: url('/assets/svg/arrow.svg');
+            background-size: cover;
         }
     }
 }
