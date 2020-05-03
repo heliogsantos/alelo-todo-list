@@ -1,7 +1,7 @@
 <app-page-name [pageName]="pageName" [subpage]="subpage"></app-page-name>
-<div class="container">
+<div class="content">
     <div class="row">
-        <div class="card-wraper col-12" *ngFor="let todo of categorieList">
+        <div class="card-wraper col-lg-4" *ngFor="let todo of categorieList">
             <a [routerLink]="['/itens', todo.id]">
                 <app-card (click)="saveListName(todo.name)" [todo]="todo"></app-card>
             </a>
