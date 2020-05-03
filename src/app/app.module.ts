@@ -16,6 +16,7 @@ import { ListComponent } from './list/list.component';
 import { ItemsComponent } from './list/items/items.component';
 import { PageNameComponent } from './header/page-name/page-name.component';
 import { ComeBackComponent } from './header/come-back/come-back.component';
+import { ButtonTaskComponent } from './button-task/button-task.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ComeBackComponent } from './header/come-back/come-back.component';
     ListComponent,
     ItemsComponent,
     PageNameComponent,
-    ComeBackComponent
+    ComeBackComponent,
+    ButtonTaskComponent
   ],
   imports: [
     ReactiveFormsModule,

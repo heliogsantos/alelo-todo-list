@@ -24,6 +24,7 @@ export class ItemsComponent implements OnInit {
   @Input() items: any;
   urlId: string;
   pageName = "Itens";
+  textBtn = "Adicionar item";
 
   ngOnInit() {
     const getId = () => localStorage.getItem("id1");

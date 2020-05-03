@@ -24,7 +24,8 @@ export class ListComponent implements OnInit {
   @Input() list: any;
   urlId: string;
   catepriesList: any;
-  pageName = "Listas"
+  pageName = "Listas";
+  textBtn = "Adicionar lista"
 
   ngOnInit() {
     this.route.params.pipe(map(p => p.id)).subscribe(id => {
