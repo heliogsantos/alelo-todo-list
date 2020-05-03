@@ -5,7 +5,7 @@
             <app-card (click)="done(todo)" [itemDone]="todo.done" [todo]="todo"></app-card>
         </div>
     </div>
-    <app-empty *ngIf="!items.length" [text]="empty"></app-empty>
+    <app-empty *ngIf="!items?.length" [text]="empty"></app-empty>
 </div>
 <app-button-task [text]="textBtn"></app-button-task>
 <app-loader [spinner]="spinner"></app-loader>
