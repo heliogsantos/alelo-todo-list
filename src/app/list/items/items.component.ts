@@ -17,8 +17,7 @@ export class ItemsComponent implements OnInit {
     private route: ActivatedRoute,
     private dataService: DataService
   ) { 
-    const id = localStorage.getItem("id1");
-    this.dataService.activeRoute(`lista/${id}`);
+    this.dataService.activeRoute(`lista/${this.getId()}`);
   }
 
   @Input() items: any;
@@ -26,12 +25,30 @@ export class ItemsComponent implements OnInit {
   pageName = "Itens";
   textBtn = "Adicionar item";
 
+  done(item: any) {
+      this.todoListService.updateItem(this.getId(), this.urlId, item.id, this.checkDone(item)).subscribe(() => {
+          console.log("Upadate");
+      });
+  }
+
+  getId(): string {
+    return localStorage.getItem("id1");
+  }
+
+  checkDone(param): any {
+    if(param.done) {
+      param.done = false;
+      return param;
+    }else {
+      param.done = true;
+      return param;
+    }
+  }
+
   ngOnInit() {
-    const getId = () => localStorage.getItem("id1");
-    
     this.route.params.pipe(map(p => p.id)).subscribe(id => this.urlId = id);
 
-    this.todoListService.getCategorieListItems(getId(), this.urlId).subscribe(item => {
+    this.todoListService.getCategorieListItems(this.getId(), this.urlId).subscribe(item => {
       this.items = item;
     });
   }

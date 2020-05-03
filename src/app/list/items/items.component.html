@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="card-wraper col-12" *ngFor="let todo of items">
-            <app-card [todo]="todo"></app-card>
+            <app-card (click)="done(todo)" [itemDone]="todo.done" [todo]="todo"></app-card>
         </div>
     </div>
 </div>
