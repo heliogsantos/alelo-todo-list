@@ -23,7 +23,7 @@ export class ListComponent implements OnInit {
 
   @Input() list: any;
   urlId: string;
-  catepriesList: any;
+  categorieList: any;
   pageName = "Listas";
   textBtn = "Adicionar lista"
 
@@ -34,7 +34,9 @@ export class ListComponent implements OnInit {
     });
 
     this.todoListService.getCategorieLists(this.urlId).subscribe(list => {
-      this.catepriesList = list;
+      this.categorieList = list;
+
+   
     });
   }
 }
