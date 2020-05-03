@@ -29,6 +29,7 @@ export class ListComponent implements OnInit {
   categorieList: any;
   textBtn = "Adicionar lista";
   subpage = "Listas";
+  spinner = true;
 
   
   saveListName(name) {
@@ -43,6 +44,7 @@ export class ListComponent implements OnInit {
 
     this.todoListService.getCategorieLists(this.urlId).subscribe(list => {
       this.categorieList = list;
+      this.spinner = false;
     });
   }
 }

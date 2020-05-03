@@ -27,6 +27,7 @@ export class ItemsComponent implements OnInit {
   urlId: string;
   textBtn = "Adicionar item";
   subpage = "Itens";
+  spinner = true;
 
   done(item: any) {
       this.todoListService.updateItem(this.getId(), this.urlId, item.id, this.checkDone(item)).subscribe(() => {
@@ -53,6 +54,7 @@ export class ItemsComponent implements OnInit {
 
     this.todoListService.getCategorieListItems(this.getId(), this.urlId).subscribe(item => {
       this.items = item;
+      this.spinner = false;
     });
   }
 }
