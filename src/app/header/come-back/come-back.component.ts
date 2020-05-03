@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { DataService } from './../../models/data-service.service';
+
 @Component({
   selector: 'app-come-back',
   templateUrl: './come-back.component.html',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComeBackComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
+  router: "";
 
   ngOnInit() {
+    this.dataService.backRoute.subscribe(route => this.router = route);
   }
 
 }

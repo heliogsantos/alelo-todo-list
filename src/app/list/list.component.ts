@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs/operators';
 
 import { TodoListService } from './../list-todo/todo-list.service';
+import { DataService } from './../models/data-service.service';
 
 
 @Component({
@@ -12,7 +13,13 @@ import { TodoListService } from './../list-todo/todo-list.service';
 })
 export class ListComponent implements OnInit {
 
-  constructor(private todoListService: TodoListService, private route: ActivatedRoute) { }
+  constructor(
+    private todoListService: TodoListService, 
+    private route: ActivatedRoute,
+    private dataService: DataService
+  ) { 
+    this.dataService.activeRoute("");
+  }
 
   @Input() list: any;
   urlId: string;
