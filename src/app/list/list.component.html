@@ -7,6 +7,7 @@
             </a>
         </div>
     </div>
+    <app-empty *ngIf="!categorieList.length" [text]="empty"></app-empty>
 </div>
 <app-button-task [text]="textBtn"></app-button-task>
 <app-loader [spinner]="spinner"></app-loader>

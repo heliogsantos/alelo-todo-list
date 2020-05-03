@@ -39,6 +39,8 @@ export class ItemsComponent implements OnInit {
     return localStorage.getItem("id1");
   }
 
+  empty = "Você não possui itens"
+
   checkDone(param): any {
     if(param.done) {
       param.done = false;

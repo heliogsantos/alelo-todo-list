@@ -1,0 +1,18 @@
+.empty {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    flex-direction: column;
+    
+    h2 {
+        font-size: 24px;
+    }
+
+    img {
+        width: 45px;
+        height: 45px;
+    }
+}

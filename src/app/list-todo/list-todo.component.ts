@@ -13,9 +13,10 @@ export class ListTodoComponent implements OnInit {
 
   constructor(private todoListService: TodoListService, private dataService: DataService) { }
 
-  todos: NewTask;
+  todos: any;
   @Input() spinner = true;
   pageName = "Categorias";
+  empty = "Você não possui categorias";
 
   private listTodos() {
     this.todoListService.getCategories().subscribe((todo: NewTask) => {

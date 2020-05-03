@@ -36,6 +36,8 @@ export class ListComponent implements OnInit {
     localStorage.setItem("listName", name);
   }
 
+  empty = "Sua lista está vazia";
+
   ngOnInit() {
     this.route.params.pipe(map(p => p.id)).subscribe(id => {
       this.urlId = id;

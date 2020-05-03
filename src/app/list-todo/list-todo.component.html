@@ -7,5 +7,6 @@
             </a>
         </div>
     </div>
+    <app-empty *ngIf="!todos.length" [text]="empty"></app-empty>
 </div>
 <app-loader [spinner]="spinner"></app-loader>
