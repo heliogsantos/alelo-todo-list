@@ -41,12 +41,20 @@
             background-image: url('/assets/svg/arrow.svg');
             background-size: cover;
         }
+
+        .done-icon {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            right: 10px;
+            background-image: url('/assets/svg/done.svg');
+        }
     }
 }
 
 .done {
-    background: #d6d6d6;
     border: none;
-    opacity: 0.3;
     box-shadow: none;
+    border: 2px solid #866fd3;
+    opacity: 0.2;
 }
