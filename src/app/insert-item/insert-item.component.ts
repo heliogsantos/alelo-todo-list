@@ -14,9 +14,9 @@ export class InsertItemComponent implements OnInit {
   subpage: string;
 
   constructor(private todoListService:TodoListService, private dataService: DataService) { 
-     this.pageName = localStorage.getItem("categorieName");
-     this.subpage = `lista ${localStorage.getItem("listName")}`;
-    this.dataService.activeRoute(`lista/${localStorage.getItem("id1")}`);
+    this.pageName = localStorage.getItem("categorieName");
+    this.subpage = `lista ${localStorage.getItem("listName")}`;
+    this.dataService.activeRoute(`itens/${localStorage.getItem("listId")}`);
   }
 
   disabled = true;
