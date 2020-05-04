@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TodoListService } from './../list-todo/todo-list.service';
-import { DataService } from './../models/data-service.service';
+import { TodoListService } from '../list-todo/todo-list.service';
+import { DataService } from '../models/data-service.service';
 
 @Component({
   selector: 'app-insert-item',

@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'
 
-import { TodoListService } from './../list-todo/todo-list.service';
-import { DataService } from './../models/data-service.service';
+import { TodoListService } from '../list-todo/todo-list.service';
+import { DataService } from '../models/data-service.service';
 
 @Component({
-  selector: 'app-insert-task',
-  templateUrl: './insert-task.component.html',
-  styleUrls: ['./insert-task.component.scss']
+  selector: 'app-insert-list',
+  templateUrl: './insert-list.component.html',
+  styleUrls: ['./insert-list.component.scss']
 })
-export class InsertTaskComponent implements OnInit  {
+export class InsertlistComponent implements OnInit  {
 
   pageName: string;
   subpage: string;

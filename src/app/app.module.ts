@@ -18,7 +18,7 @@ import { PageNameComponent } from './header/page-name/page-name.component';
 import { ComeBackComponent } from './header/come-back/come-back.component';
 import { ButtonTaskComponent } from './button-task/button-task.component';
 import { EmptyComponent } from './empty/empty.component';
-import { InsertTaskComponent } from './insert-task/insert-task.component';
+import { InsertlistComponent } from './insert-list/insert-list.component';
 import { PopUpComponent } from './pop-up/pop-up.component';
 import { InsertItemComponent } from './insert-item/insert-item.component';
 
@@ -37,7 +37,7 @@ import { InsertItemComponent } from './insert-item/insert-item.component';
     ComeBackComponent,
     ButtonTaskComponent,
     EmptyComponent,
-    InsertTaskComponent,
+    InsertlistComponent,
     PopUpComponent,
     InsertItemComponent
   ],
