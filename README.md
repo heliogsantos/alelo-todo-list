@@ -1,17 +1,14 @@
 # Todo-List Alelo 😜
 
 <p align="left">
-  <img src="src/assets/images/home.jpg" title="home"  width="250">
-  <img src="src/assets/images/list.jpg" title="lista" width="250">"
+  <img src="src/assets/images/home.jpg" title="home"  width="200">
+  <img src="src/assets/images/list.jpg" title="lista" width="200">
+  <img src="src/assets/images/spinner.jpg" title="spinner" width="200">
+  <img src="src/assets/images/items.jpg" title="itens" width="200">
 </p>
 <br/>
-<p align="left">
-  <img src="src/assets/images/spinner.jpg" title="spinner" width="250">
-  <img src="src/assets/images/items.jpg" title="itens" width="250>
-</p>
 
 <h3 align="left">Install project</h3>
-
 <ul>
     <li>npm install</li>
 </ul>
