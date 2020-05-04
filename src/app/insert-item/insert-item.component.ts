@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'
 
 import { TodoListService } from './../list-todo/todo-list.service';
 import { DataService } from './../models/data-service.service';
@@ -14,10 +13,10 @@ export class InsertItemComponent implements OnInit {
   pageName: string;
   subpage: string;
 
-  constructor(private todoListService:TodoListService, private router: Router, private dataService: DataService) { 
+  constructor(private todoListService:TodoListService, private dataService: DataService) { 
      this.pageName = localStorage.getItem("categorieName");
      this.subpage = `lista ${localStorage.getItem("listName")}`;
-    this.dataService.activeRoute(`itens/${localStorage.getItem("listId")}`);
+    this.dataService.activeRoute(`lista/${localStorage.getItem("id1")}`);
   }
 
   disabled = true;
@@ -38,13 +37,9 @@ export class InsertItemComponent implements OnInit {
       this.acitivePopUp = true;
 
       setInterval(() => {
-        this.navegationList();
-      }, 1000);
+         this.acitivePopUp = false;
+      }, 2000);
     });
-  }
-
-  navegationList() {
-    this.router.navigate([`itens/${localStorage.getItem("listId")}`]);
   }
   
   ngDoCheck() {

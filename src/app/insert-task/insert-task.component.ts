@@ -14,7 +14,7 @@ export class InsertTaskComponent implements OnInit  {
   pageName: string;
   subpage: string;
 
-  constructor(private todoListService: TodoListService, private router: Router, private dataService: DataService) {
+  constructor(private todoListService: TodoListService, private dataService: DataService) {
     this.pageName = localStorage.getItem("categorieName");
     this.dataService.activeRoute(`lista/${localStorage.getItem("id1")}`);
   }
@@ -36,13 +36,10 @@ export class InsertTaskComponent implements OnInit  {
       this.spinner = false;
       this.acitivePopUp = true;
       setInterval(() => {
-        this.navegationList();
-      }, 1000);
+        this.acitivePopUp = false;
+        this.newList = "";
+      }, 2000);
     });
-  }
-
-  navegationList() {
-    this.router.navigate([`lista/${localStorage.getItem("id1")}`]);
   }
 
   ngDoCheck() {
