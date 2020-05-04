@@ -16,8 +16,10 @@ export class CardComponent implements OnInit {
   @Input() itemDone;
 
   checkKey(todo) {
-    return Object.keys(todo).length;
+    for(let x in todo) {
+     x === 'done' ? false : true; 
+    }
   }
-
+  
   ngOnInit() {}
 }
