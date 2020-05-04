@@ -1,6 +1,6 @@
 # Todo-List Alelo 😜
 
-<p align="left">
+<p align="center">
   <img src="src/assets/images/home.jpg" title="home"  width="200">
   <img src="src/assets/images/list.jpg" title="lista" width="200">
   <img src="src/assets/images/spinner.jpg" title="spinner" width="200">
