@@ -1,0 +1,27 @@
+.pop-up {
+    width: 250px;
+    background: #735cc3;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    z-index: 20;
+    padding: 30px 10px 10px 10px;
+    border-radius: 4px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-box-shadow: 0px 1px 20px -6px rgba(0,0,0,0.46);
+    -moz-box-shadow: 0px 1px 20px -6px rgba(0,0,0,0.46);
+    box-shadow: 0px 1px 20px -6px rgba(0,0,0,0.46);
+    display: flex;
+    justify-content: center;
+    transition: 0.3s linear;
+
+    p {
+        text-align: center;
+        color: #ffffff;
+    }
+}
+
+.active {
+    top: 50%;
+}

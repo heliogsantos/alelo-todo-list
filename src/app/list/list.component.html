@@ -3,7 +3,7 @@
     <div class="row">
         <div class="card-wraper col-lg-4" *ngFor="let todo of categorieList">
             <a [routerLink]="['/itens', todo.id]">
-                <app-card (click)="saveListName(todo.name)" [todo]="todo"></app-card>
+                <app-card (click)="saveListName(todo.name, todo.id)" [todo]="todo"></app-card>
             </a>
         </div>
     </div>

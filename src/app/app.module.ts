@@ -19,6 +19,8 @@ import { ComeBackComponent } from './header/come-back/come-back.component';
 import { ButtonTaskComponent } from './button-task/button-task.component';
 import { EmptyComponent } from './empty/empty.component';
 import { InsertTaskComponent } from './insert-task/insert-task.component';
+import { PopUpComponent } from './pop-up/pop-up.component';
+import { InsertItemComponent } from './insert-item/insert-item.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { InsertTaskComponent } from './insert-task/insert-task.component';
     ComeBackComponent,
     ButtonTaskComponent,
     EmptyComponent,
-    InsertTaskComponent
+    InsertTaskComponent,
+    PopUpComponent,
+    InsertItemComponent
   ],
   imports: [
     ReactiveFormsModule,

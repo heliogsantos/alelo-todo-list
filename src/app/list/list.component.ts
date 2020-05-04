@@ -27,16 +27,15 @@ export class ListComponent implements OnInit {
   @Input() list: any;
   urlId: string;
   categorieList: any;
-  textBtn = "Adicionar lista";
-  subpage = "Listas";
+  readonly textBtn = "Adicionar lista";
+  readonly subpage = "Listas";
+  readonly empty = "Sua lista está vazia";
   spinner = true;
 
-  
-  saveListName(name) {
+  saveListName(name: string, id: string) {
     localStorage.setItem("listName", name);
+    localStorage.setItem("listId", id);
   }
-
-  empty = "Sua lista está vazia";
 
   ngOnInit() {
     this.route.params.pipe(map(p => p.id)).subscribe(id => {

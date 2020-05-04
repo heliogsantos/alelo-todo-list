@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
 
 import { TodoListService } from './../list-todo/todo-list.service';
+import { DataService } from './../models/data-service.service';
 
 @Component({
   selector: 'app-insert-task',
@@ -11,13 +12,17 @@ import { TodoListService } from './../list-todo/todo-list.service';
 export class InsertTaskComponent implements OnInit  {
 
   pageName: string;
+  subpage: string;
 
-  constructor(private todoListService: TodoListService, private router: Router) {
+  constructor(private todoListService: TodoListService, private router: Router, private dataService: DataService) {
     this.pageName = localStorage.getItem("categorieName");
+    this.dataService.activeRoute(`lista/${localStorage.getItem("id1")}`);
   }
 
   spinner = false;
-  readonly  textBtn = "inserir";
+  acitivePopUp = false;
+  readonly  textBtn = "insira lista";
+  readonly textPostList = "Lista inserida com sucesso!";
 
   newList: string;
   disabled = true;
@@ -29,7 +34,10 @@ export class InsertTaskComponent implements OnInit  {
     this.spinner = true;
     this.todoListService.saveList(localStorage.getItem("id1"), postList).subscribe(() => {
       this.spinner = false;
-      this.navegationList();
+      this.acitivePopUp = true;
+      setInterval(() => {
+        this.navegationList();
+      }, 1000);
     });
   }
 

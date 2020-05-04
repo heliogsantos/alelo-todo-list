@@ -1,7 +1,7 @@
 <app-page-name [pageName]="pageName" [subpage]="subpage"></app-page-name>
 <div class="content">
     <div class="row justify-content-center">
-        <h2>Insira uma lista</h2>
+        <h2>Insira um item</h2>
     </div>
     <form>
         <div class="row justify-content-center">
@@ -14,5 +14,5 @@
 
 <app-pop-up [text]="textPostList" [activePopUp]="acitivePopUp"></app-pop-up>
 
-<app-button-task (click)="postList()" [disabled]="disabled" [text]="textBtn"></app-button-task>
+<app-button-task (click)="postItem()" [disabled]="disabled" [text]="textBtn"></app-button-task>
 <app-loader [spinner]="spinner"></app-loader>
