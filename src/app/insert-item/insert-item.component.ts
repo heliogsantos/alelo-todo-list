@@ -35,6 +35,7 @@ export class InsertItemComponent implements OnInit {
     this.todoListService.saveItem(localStorage.getItem("id1"), localStorage.getItem("listId"), item).subscribe(() => {
       this.spinner = false;
       this.acitivePopUp = true;
+      this.newList= "";
 
       setInterval(() => {
          this.acitivePopUp = false;
