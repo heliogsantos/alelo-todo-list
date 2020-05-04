@@ -9,9 +9,9 @@ export class LoaderComponent implements OnInit {
 
   constructor() { }
 
-  @Input() spinner;
+  @Input() spinner: boolean;
 
   ngOnInit() {
   }
-
+  
 }

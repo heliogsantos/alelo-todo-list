@@ -1,7 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '~bootstrap/dist/css/bootstrap.min.css';
-@import './sass/reset';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+html,
+body { 
+    height: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 2px;
+    color: #ffffff;
+}
 
 
 button {
@@ -27,5 +47,6 @@ button {
 
 .content {
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto; 
+    border-radius: 4px;
 }
